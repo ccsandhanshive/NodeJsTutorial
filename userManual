@@ -1,0 +1,56 @@
+1.Add Movie
+http://localhost:3000/movies/admin/addMovie => Post
+//here admin must enter original cost movie cost per tikit will update base on popularity   
+{	
+	"movie_name":"Bajigar", 
+    "movie_language":"Hindi",
+    "originalCost":100, 
+    "movie_popularity":180 
+        
+}
+
+2.Update Movie
+http://localhost:3000/movies/admin/updateMovie   => Put
+//here admin must enter original cost movie cost per tikit will update base on popularity
+//movie_id is mendatory 
+//If other options not given it will take exiting values from data Collection
+{
+    "movie_id":10,                             
+    "movie_name":"Soldier",                      
+    "movie_language":"hindi",
+    "movie_popularity":23,
+     "originalCost":200
+}
+
+3.delete operation
+http://localhost:3000/movies/admin/deleteMovie  => Delete
+//Id maintain atomatically
+{	
+	"movie_id":9
+        
+}
+
+
+4.get list of all movie
+http://localhost:3000/movies/admin/listAllMovie  => Get
+
+5. get movie by popularity                       
+//0-> not populer , 1->less populer 2->most populer
+
+/*if(movie popularity between(0,50)) =>not populer
+if(movie popularity between(50,100)) =>less populer
+if(movie popularity between(100,90000000)) =>most populer*/
+
+http://localhost:3000/movies//admin/getMovieByPopularity?popularity=0      => Get 
+http://localhost:3000/movies//admin/getMovieByPopularity?popularity=1      => Get
+http://localhost:3000/movies//admin/getMovieByPopularity?popularity=2      => Get
+
+6.update movie popularity and cost 
+            //dummy operation
+http://localhost:3000/movies/user/getMovieByPopularityAndUpdateCost?popularity=2  => Put
+//Movie id should present in selected movie popularity
+{	
+	"movie_id":1,                                   
+	"numberOftickets":2
+        
+}

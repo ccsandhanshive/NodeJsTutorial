@@ -1,0 +1,20 @@
+{
+  "name": "backendapplication",
+  "version": "1.0.0",
+  "description": "backend application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "core",
+    "mongoose"
+  ],
+  "author": "chetan",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.27",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
